@@ -61,6 +61,15 @@
 \usepackage{titling}
 \setlength{\droptitle}{-1.2cm}
 
+% Disable metadata for reproducible PDF.
+% https://tex.stackexchange.com/a/313605
+\ifpdf
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\hypersetup{pdfcreator={},pdfproducer={}}
+\fi
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % To add the badges to the final version after notification, first download
 % the appropriate `usenixbadges` package version as detailed on the Final
